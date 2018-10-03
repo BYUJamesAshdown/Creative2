@@ -1,7 +1,7 @@
-html
+body
 {
     background-image: url(HSWallpaper.jpg);
-    background-size:     cover;                      /* <------ */
+    background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
     background-color: #b3daff;
@@ -39,6 +39,7 @@ html
     background-color: #ff3300;
     box-shadow: 1px 1px 5px 2px #ff0066;
     cursor:pointer;
+    width: 100%;
 }
 
 .classButton:active

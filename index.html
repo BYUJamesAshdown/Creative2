@@ -1,40 +1,25 @@
 <!doctype html>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="main.css">
 
-<button>Generate new deck</button>
-
-<body>
-    <div class="bkgrd">
-        <div class="transbox">
-            <div class="topOfPage">
-                <h1>Hearthstone Random Deck Generator</h1>
-            </div>
-        </div>
-        <div class="transbox">
-            <div class="middle">
-                <div>
-                    <div id="firstRow">
-                        <button id="Warrior" class="classButton" onclick="GenerateDeck()">Warrior</button>
-                        <button id="Shaman" class="classButton" onclick="GenerateDeck()">Shaman</button>
-                        <button id="Rogue" class="classButton" onclick="GenerateDeck()">Rogue</button>
-                    </div>
-                    <div id="secondRow">
-                        <button id="Paladin" class="classButton" onclick="GenerateDeck()">Paladin</button>
-                        <button id="Hunter" class="classButton" onclick="GenerateDeck()">Hunter</button>
-                        <button id="Druid" class="classButton" onclick="GenerateDeck()">Druid</button>
-                    </div>
-                    <div id="thirdRow">
-                        <button id="Mage" class="classButton" onclick="GenerateDeck()">Mage</button>
-                        <button id="Priest" class="classButton" onclick="GenerateDeck()">Priest</button>
-                        <button id="Warlock" class="classButton" onclick="GenerateDeck()">Warlock</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
+<div class="container">
+	<div class="row text-center"><h1>Hearthstone Random Deck Generator</h1></div>
+	<div class="row">
+		<div class="col text-center"><button id="Warrior" class="classButton">Warrior</button></div>
+		<div class="col text-center"><button id="Shaman" class="classButton">Shaman</button></div>
+		<div class="col text-center"><button id="Rogue" class="classButton">Rogue</button></div>
+	</div>
+	<div class="row">
+		<div class="col text-center"><button id="Paladin" class="classButton">Paladin</button></div>
+		<div class="col text-center"><button id="Hunter" class="classButton">Hunter</button></div>
+		<div class="col text-center"><button id="Druid" class="classButton">Druid</button></div>
+	</div>
+	<div class="row">
+		<div class="col text-center"><button id="Mage" class="classButton">Mage</button></div>
+		<div class="col text-center"><button id="Priest" class="classButton">Priest</button></div>
+		<div class="col text-center"><button id="Warlock" class="classButton">Warlock</button></div>
+	</div>
+</div>
 
 <script type="text/javascript" src="main.js"></script>
