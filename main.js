@@ -65,3 +65,6 @@ function DisplayEachCard()
         $(cardI).html(deck[i]);
     }
 }
+
+
+

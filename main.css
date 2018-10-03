@@ -1,0 +1,48 @@
+html
+{
+    background-image: url(HSWallpaper.jpg);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    background-color: #b3daff;
+}
+
+
+
+.bkgrd 
+{
+    
+}
+
+.transbox 
+{
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+.topOfPage
+{
+    text-align: center;
+}
+
+.middle
+{
+    text-align: center;
+}
+
+.classButton
+{
+    border: 1px solid black;
+    border-radius: 90%;
+    background-color: #ff3300;
+    box-shadow: 1px 1px 5px 2px #ff0066;
+    cursor:pointer;
+}
+
+.classButton:active
+{
+    box-shadow: 1px 0px 5px 0px #cc0052;
+    transform: translateY(4px);
+}
