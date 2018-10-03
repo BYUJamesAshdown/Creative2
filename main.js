@@ -73,3 +73,41 @@ function DisplayEachCard()
 
 
 
+
+
+function GenerateWarriorDeck()
+{
+    GenerateDeck("Warrior");
+}
+function GenerateShamanDeck()
+{
+    GenerateDeck("Shaman");
+}
+function GenerateRogueDeck()
+{
+    GenerateDeck("Rogue");
+}
+function GeneratePaladinDeck()
+{
+    GenerateDeck("Paladin");
+}
+function GenerateHunterDeck()
+{
+    GenerateDeck("Hunter");
+}
+function GenerateDruidDeck()
+{
+    GenerateDeck("Druid");
+}
+function GenerateMageDeck()
+{
+    GenerateDeck("Mage");
+}
+function GeneratePriestDeck()
+{
+    GenerateDeck("Priest");
+}
+function GenerateWarlockDeck()
+{
+    GenerateDeck("Warlock");
+}
