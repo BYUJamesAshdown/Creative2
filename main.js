@@ -1,8 +1,8 @@
 /* global $ */
 var cards = {};
-var classLibrary = []
 var deck = [];
 
+/* Get cards from hearthstonejson.com, sort them into a map of classes */
 $(document).ready(function() {
 	let url = "https://api.hearthstonejson.com/v1/latest/enUS/cards.collectible.json";
 	
@@ -12,10 +12,34 @@ $(document).ready(function() {
 			cards[card.cardClass] = cards[card.cardClass] || [];
 			cards[card.cardClass].push(card);
 		}
-		sortCards(cards["DRUID"]);
-		console.log(cards["DRUID"]);
+		console.log(cards);
+	});
+	
+	$(".classButton").click(function() {
+		let HSclass = this.id.toUpperCase();
+		generateDeck(HSclass);
 	});
 });
+
+/* 
+	Generates a deck given a HS class:
+		Generates 30 random cards.
+		Assigns each of the cards to their respective display element. (prob a better way to do this with lists)
+		Loads the list of cards into the deck variable.
+*/
+function generateDeck(HSclass) {
+	deck = [];
+	
+	let classCards = cards[HSclass];
+	let neutral = cards["NEUTRAL"];
+	let library = classCards.concat(neutral);
+	for (let i = 0; i < 30; i++) {
+		//let currentCard = GenerateCard(HSclass);
+		let currentCard = library[getRandomIndex(library)];
+		deck.push(currentCard);
+	}
+	console.log(deck);
+};
 
 function getRandomIndex(array) {
 	return Math.floor(Math.random() * array.length);
@@ -62,22 +86,6 @@ function sortCards(cards) {
 		}
 	});
 }
-
-/* 
-	Generates a deck given a HS class:
-		Generates 30 random cards.
-		Assigns each of the cards to their respective display element. (prob a better way to do this with lists)
-		Loads the list of cards into the deck variable.
-*/
-function GenerateDeck(HSclass)  
-{
-	deck = [];
-	for (var i = 0; i < 30; i++)
-	{
-		var currentCard = GenerateCard(HSclass);
-		deck.push(currentCard);
-	}
-};
 
 
 
