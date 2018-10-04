@@ -9,6 +9,11 @@ $(document).ready(function() {
 	$.get(url).done(function(data) {
 		for (let i = 0; i < data.length; i++) {
 			let card = data[i];
+			
+			if (card.type == "HERO" && !card.cost) {
+				continue;
+			}
+			
 			cards[card.cardClass] = cards[card.cardClass] || [];
 			cards[card.cardClass].push(card);
 		}
@@ -18,6 +23,7 @@ $(document).ready(function() {
 	$(".classButton").click(function() {
 		let HSclass = this.id.toUpperCase();
 		generateDeck(HSclass);
+		displayDeck();
 	});
 });
 
@@ -33,11 +39,14 @@ function generateDeck(HSclass) {
 	let classCards = cards[HSclass];
 	let neutral = cards["NEUTRAL"];
 	let library = classCards.concat(neutral);
+	
 	for (let i = 0; i < 30; i++) {
 		//let currentCard = GenerateCard(HSclass);
 		let currentCard = library[getRandomIndex(library)];
 		deck.push(currentCard);
 	}
+	
+	sortCards(deck);
 	console.log(deck);
 };
 
@@ -74,7 +83,7 @@ function GenerateCard(HSclass) {
 function sortCards(cards) {
 	cards.sort(function(a, b) {
 		if (a.cost != b.cost) {
-			return a - b;
+			return a.cost - b.cost;
 		}
 		
 		if (a.name < b.name) {
@@ -84,7 +93,9 @@ function sortCards(cards) {
 		} else {
 			return 0;
 		}
+		
 	});
+	
 }
 
 
@@ -92,9 +103,14 @@ function sortCards(cards) {
 /*
 	Outputs the name of each card (& maybe mana cost?) into the DeckList
 */
-function DisplayDeck()
-{
-	
+function displayDeck() {
+	let deckHTML = "<ul>";
+	for (let i = 0; i < deck.length; i++) {
+		let card = deck[i];
+		deckHTML += "<li>" + card.name;
+	}
+	deckHTML += "</ul>";
+	$("#deck").html(deckHTML);
 }
 
 
