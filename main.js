@@ -98,79 +98,28 @@ function sortCards(cards) {
 	
 }
 
-
-
 /*
 	Outputs the name of each card (& maybe mana cost?) into the DeckList
 */
 function displayDeck() {
+	/*
 	let deckHTML = "<ul>";
 	for (let i = 0; i < deck.length; i++) {
 		let card = deck[i];
 		deckHTML += "<li>" + card.name;
 	}
 	deckHTML += "</ul>";
-	$("#deck").html(deckHTML);
-}
-
-
-/*
-	Sorts the Deck by Mana Cost
-*/
-function SortDeckByManaCost()
-{
-	
-}
-
-/*
-	Adds each card to the large display below the DeckList
-*/
-function DisplayEachCard()
-{
-	for (var i = 0; i < 30; i++)
-	{
-		var cardI = "deck " + i;
-		$(cardI).html(deck[i]);
+	*/
+	let deckHTML = "";
+	for (let i = 0; i < deck.length; i++) {
+		let card = deck[i];
+		let url = "https://art.hearthstonejson.com/v1/tiles/" + card.id + ".webp";
+		deckHTML += "<div>";
+		deckHTML += "<img class=\"cardTile\"";
+		deckHTML += "src=\"" + url + "\"";
+		deckHTML += "\">";
+		deckHTML += card.name;
+		deckHTML += "</div>";
 	}
-}
-
-
-
-
-
-function GenerateWarriorDeck()
-{
-	GenerateDeck("Warrior");
-}
-function GenerateShamanDeck()
-{
-	GenerateDeck("Shaman");
-}
-function GenerateRogueDeck()
-{
-	GenerateDeck("Rogue");
-}
-function GeneratePaladinDeck()
-{
-	GenerateDeck("Paladin");
-}
-function GenerateHunterDeck()
-{
-	GenerateDeck("Hunter");
-}
-function GenerateDruidDeck()
-{
-	GenerateDeck("Druid");
-}
-function GenerateMageDeck()
-{
-	GenerateDeck("Mage");
-}
-function GeneratePriestDeck()
-{
-	GenerateDeck("Priest");
-}
-function GenerateWarlockDeck()
-{
-	GenerateDeck("Warlock");
+	$("#deck").html(deckHTML);
 }
