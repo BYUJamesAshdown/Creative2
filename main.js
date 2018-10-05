@@ -114,7 +114,9 @@ function displayDeck() {
 	for (let i = 0; i < deck.length; i++) {
 		let card = deck[i];
 		let url = "https://art.hearthstonejson.com/v1/tiles/" + card.id + ".webp";
-		deckHTML += "<div>";
+		deckHTML += "<div";
+		//deckHTML += " onmouseover=\"displayCardArt(" + card + ")\"";
+		deckHTML += ">";
 		deckHTML += "<img class=\"cardTile\"";
 		deckHTML += "src=\"" + url + "\"";
 		deckHTML += "\">";
@@ -123,3 +125,19 @@ function displayDeck() {
 	}
 	$("#deck").html(deckHTML);
 }
+
+/*function displayCardArt(card)
+{
+	let fullPictureurl = "https://art.hearthstonejson.com/v1/render/latest/enUS/256x/" + card.id + ".png";
+	console.log(fullPictureurl);
+	$.get(fullPictureurl).done(function(data) {
+		let deckHTML = "";
+		deckHTML += "<div>";
+		deckHTML += "<img ";
+		deckHTML += "src=\"" + fullPictureurl + "\"";
+		deckHTML += "\">";
+		deckHTML += "</div>";
+		$("#largeCard").html(data);
+		console.log(data);
+	});
+}*/
