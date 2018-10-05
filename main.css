@@ -4,27 +4,13 @@ body {
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-color: #b3daff;
-	min-height: 200%;
-}
-
-
-
-.bkgrd {
-	
+	min-height: 838px;
 }
 
 .transbox {
   margin: 30px;
   background-color: #ffffff7f;
   border: 1px solid black;
-}
-
-.topOfPage {
-	text-align: center;
-}
-
-.middle {
-	text-align: center;
 }
 
 .classButton {
