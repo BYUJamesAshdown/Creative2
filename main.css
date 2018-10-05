@@ -10,16 +10,19 @@ body {
 .transbox {
   margin: 30px;
   background-color: #ffffff7f;
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 .classButton {
-	border: 1px solid black;
+	border: 3px solid black;
 	border-radius: 90%;
-	background-color: #ff3300;
-	box-shadow: 1px 1px 5px 2px #ff0066;
-	cursor:pointer;
+	background-color: #ff9933;/*#ff3300;*/
+	box-shadow: 1px 1px 5px 2px #ff0066;/*#c299ff;*/
+	cursor: pointer;
 	width: 100%;
+	font-size: 140%;
+	text-shadow: 4px 1px 10px #FFFFFF;
+	font-weight: 500;
 }
 
 .classButton:active {
@@ -30,4 +33,47 @@ body {
 .cardTile {
 	clip-path: polygon(20% 0, 98% 0, 98% 100%, 20% 100%);
 	height: 1em;
+}
+
+#buttonHeaderText {
+	text-align: center;
+	font-size: 200%;
+	color: #EEA82F;
+	text-shadow: 2px 2px 5px #111111;
+	border: 5px inset #474139;
+	border-radius: 12%;
+	margin: auto;
+    width: 48%;
+    background-color: #6F6559;
+}
+
+
+
+/* Individual Button Colors */
+#Warrior {
+	background-color: #C79C6E;
+}
+#Druid {
+	background-color: #FF7D0A;
+}
+#Hunter {
+	background-color: #ABD473;
+}
+#Mage {
+	background-color: #40C7EB;
+}
+#Paladin {
+	background-color: #F58CBA;
+}
+#Priest {
+	background-color: #FFFFFF;
+}
+#Rogue {
+	background-color: #FFF569;
+}
+#Shaman {
+	background-color: #0070DE;
+}
+#Warlock {
+	background-color: #8787ED;
 }
